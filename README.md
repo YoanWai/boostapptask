@@ -1,7 +1,9 @@
 **#Project Initializing Guide**
 
 Required:
-XAMPP - Apache and MySQL Running
+XAMPP - Apache and MySQL Running.
+Download the zipped project folder and place it in "C:\xampp\htdocs"
+
 
 Open the terminal and paste the following commands:
 
