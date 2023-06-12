@@ -17,8 +17,8 @@
 </div>
 <div class="d-flex py-3 border-bottom">
     <ul class="nav nav-pills">
-        <li class="nav-item px-2"><a class="nav_button text-decoration-none text-muted" href="/">מוצרים</a></li>
-        <li class="nav-item px-2"><a class="nav_button text-decoration-none text-muted "
+        <li class="nav-item "><a class="nav_button text-decoration-none text-muted" href="/">מוצרים</a></li>
+        <li class="nav-item px-4"><a class="nav_button text-decoration-none text-muted "
                 href="/favorites_menu">מועדפים</a></li>
     </ul>
 </div>

@@ -8,6 +8,11 @@
         $discountPrice = $price - $price * ($discount / 100);
         $totalPriceAfterDiscount += round($discountPrice * $cartItem->quantity);
     }
+    // Calculate tax 17%
+    $tax = $totalPriceAfterDiscount * 0.17;
+    // Calculate total price after tax
+    $totalPriceAfterTax = round($totalPriceAfterDiscount + $tax);
+    
 @endphp
 
 <div id="sidebar" class="col-3 collapse collapse-horizontal show">
@@ -29,8 +34,13 @@
             @endforeach
         </div>
         <div class="d-flex py-3 px-2 border-end border-top">
+            <div class="nav-item ms-2">17% מע"מ</div>
+            <div class="nav-item me-auto">₪{{ $tax }}
+            </div>
+        </div>
+        <div class="d-flex py-3 px-2 border-end border-top">
             <div class="nav-item ms-2">סה"כ</div>
-            <div class="nav-item me-auto">{{ $totalPriceAfterDiscount }}₪
+            <div class="nav-item me-auto">₪{{ $totalPriceAfterTax }}
             </div>
         </div>
     </div>
