@@ -1,6 +1,6 @@
 @props(['item'])
 
-<div data-id="<?= $item->id ?>" class="item-card card m-3" style="width:20%" onclick="onItemCardClick(this, event)"
+<div data-id="<?= $item->id ?>" class="item-card card m-3" style="width: 12rem" onclick="onItemCardClick(this, event)"
     onmousedown="onMouseDown(this,event)" onmouseup="onMouseUp(this,event)">
     <div class="card-body">
         <div>

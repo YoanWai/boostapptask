@@ -12,10 +12,10 @@
     $tax = $totalPriceAfterDiscount * 0.17;
     // Calculate total price after tax
     $totalPriceAfterTax = round($totalPriceAfterDiscount + $tax);
-    
+
 @endphp
 
-<div id="sidebar" class="col-3 collapse collapse-horizontal show">
+<div id="sidebar" class="col-3 collapse collapse-horizontal show ">
     <div id="sidebar-nav" class="text-sm-start min-vh-100 d-flex flex-column">
         <div class="d-flex py-3 px-2 border-bottom nav nav-pills">
             <li class="nav-item ms-auto">סל מוצרים</li>

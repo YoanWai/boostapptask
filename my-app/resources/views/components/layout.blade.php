@@ -14,12 +14,6 @@
 
 <body>
     {{ csrf_field() }}
-    <script>
-        window.axios.defaults.headers.common = {
-            'X-Requested-With': 'XMLHttpRequest',
-            'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
-        };
-    </script>
     <main>
         <!-- Main Wrapper -->
         <div class="container-fluid g-0 mx-0">

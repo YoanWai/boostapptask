@@ -1,6 +1,13 @@
 # version is not needed in newer versions of Docker. (ignored)
 version: "2"
 
+x-app-variables: &app-variables
+  DB_HOST: mariadb
+  DB_PORT: 3306
+  DB_USERNAME: bn_myapp
+  DB_DATABASE: bitnami_myapp
+  APP_KEY: base64:gaAk51hAtj79ZC4V9JGFicTTlMrwceTsXisQFrVMNOA=
+
 services:
   mariadb:
     image: docker.io/bitnami/mariadb:10.6
@@ -13,12 +20,21 @@ services:
     image: docker.io/bitnami/laravel:10
     ports:
       - "8000:8000"
-    environment:
-      - DB_HOST=mariadb
-      - DB_PORT=3306
-      - DB_USERNAME=bn_myapp
-      - DB_DATABASE=bitnami_myapp
+    environment: *app-variables
     volumes:
-      - "./my-app:/app"
+      - ./my-app:/app
+      - vendor:/app/vendor
     depends_on:
       - mariadb
+  myapp-setup:
+    image: docker.io/bitnami/laravel:10
+    command: bash -c "composer install && npm i && php artisan migrate:refresh --seed && echo 'Running on - http://localhost:8000' && exit 0"
+    environment: *app-variables
+    volumes:
+      - ./my-app:/app
+      - vendor:/app/vendor
+    depends_on:
+      - mariadb
+
+volumes:
+  vendor:

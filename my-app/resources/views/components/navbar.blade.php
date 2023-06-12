@@ -10,7 +10,7 @@
     <ul class="nav nav-pills me-auto px-3">
         <li>
             <i data-bs-target="#sidebar" data-bs-toggle="collapse" class="cart-button fas fa-shopping-cart"
-                style="cursor: pointer"></i>
+                style="cursor: pointer; display: none;"></i>
         </li>
 
     </ul>
