@@ -1,7 +1,7 @@
 @props(['item'])
 
-<div data-id="<?= $item->id ?>" class="item-card card m-3" style="width: 12rem" onclick="onItemCardClick(this, event)"
-    onmousedown="onMouseDown(this,event)" onmouseup="onMouseUp(this,event)">
+<div data-id="<?= $item->id ?>" class="col-md-auto item-card card m-3" style="width: 10rem"
+    onclick="onItemCardClick(this, event)" onmousedown="onMouseDown(this,event)" onmouseup="onMouseUp(this,event)">
     <div class="card-body">
         <div>
             <button data-id="<?= $item->id ?>" class="border-0 starButton btn<?php echo $item->favorite ? ' checked' : ''; ?>"

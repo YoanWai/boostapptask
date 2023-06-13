@@ -16,17 +16,22 @@
     {{ csrf_field() }}
     <main>
         <!-- Main Wrapper -->
-        <div class="container-fluid g-0 mx-0">
+        <div id="right-div-col" class="container-fluid g-0 mx-0">
             <div class="row g-0">
-                <div class="col-9" data-collapsed-sidebar-classes="col-12">
+                <div class="col-lg-9" data-collapsed-sidebar-classes="col-12">
                     <x-navbar />
                     <!-- Items Menu / Main Content -->
-                    <div class="row m-auto ">
-                        {{ $slot }}
+                    <div class="container-fluid text-center">
+                        <div class="row justify-content-center">
+                            {{ $slot }}
+                        </div>
                     </div>
                 </div>
                 <!-- Sidebar -->
-                <x-sidebar :cartItems="$cartItems" />
+                <div id="sidebar" class="col-lg-3 collapse collapse-horizontal show ">
+                    <x-sidebar :cartItems="$cartItems" />
+                </div>
+
     </main>
 </body>
 
@@ -35,6 +40,5 @@
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
 </script>
 <script src="{{ asset('js/javascript.js') }}"></script>
-
 
 </html>
