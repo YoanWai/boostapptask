@@ -1,22 +1,20 @@
-# Boostapp Task
+**#Project Initializing Guide**
 
-A simple shopping cart application built with Laravel.
+Required: MySQL Running.
 
-## Prerequisites
+\*Download the zipped project folder and place it in "C:\xampp\htdocs"
 
-Before running this project, make sure you have Docker and Docker Compose installed on your machine. If you don't have them already, you can follow the installation instructions below:
+\*Copy .env.example into .env
 
--   **Docker**: [Install Docker](https://docs.docker.com/get-docker/)
--   **Docker Compose**: [Install Docker Compose](https://docs.docker.com/compose/install/)
+\*Open the terminal and paste the following commands:
 
-## Getting Started
+//Install dependencies:
+"npm i"
 
-To get started with the project, use the following commands:
+// Seed your empty MySQL Database:
+"php artisan migrate:refresh --seed"
 
-### Run the Application
+// Run the project:
+php artisan serve
 
-docker compose up
-
-### Destroy the Application
-
-docker compose down -v
+And now you’ll be able to access the website through the url shown after serving, usually http://127.0.0.1:8000
