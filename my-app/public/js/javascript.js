@@ -1,4 +1,5 @@
 setupSidebar();
+onSwitchMenus();
 
 document.body.onload = function () {
     window.axios.defaults.headers.common = {
@@ -83,4 +84,22 @@ async function deleteCartItem(i, event) {
     });
     const cartItem = resposne.data;
     window.location.reload();
+}
+
+function onSwitchMenus() {
+    const currentUrl = window.location.pathname;
+    const mutzarim_text = document.querySelector("#mutzarim_text");
+    const favorites_text = document.querySelector("#favorites_text");
+
+    if (currentUrl === "/") {
+        favorites_text.classList.remove("text-black", "fw-bold", "active");
+        favorites_text.classList.add("text-muted");
+        mutzarim_text.classList.remove("text-muted");
+        mutzarim_text.classList.add("text-black", "fw-bold", "active");
+    } else if (currentUrl === "/favorites_menu") {
+        mutzarim_text.classList.remove("text-black", "fw-bold", "active");
+        mutzarim_text.classList.add("text-muted");
+        favorites_text.classList.remove("text-muted");
+        favorites_text.classList.add("text-black", "fw-bold", "active");
+    }
 }
