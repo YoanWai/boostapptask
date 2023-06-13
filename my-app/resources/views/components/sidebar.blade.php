@@ -15,7 +15,7 @@
     
 @endphp
 
-<div id="sidebar-nav" class="text-sm-start min-vh-100 d-flex flex-column">
+<div id="sidebar-nav" class="text-sm-start mh-100 d-flex flex-column">
     <div class="d-flex py-3 px-2 border-bottom nav nav-pills">
         <li class="nav-item ms-auto">סל מוצרים</li>
         <button data-bs-target="#sidebar" data-bs-toggle="collapse" type="button" class="btn-close text-start"

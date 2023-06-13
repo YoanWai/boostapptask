@@ -4,6 +4,16 @@
     src: url('../fonts/Rubik/Rubik-Medium.ttf');
   }
 
+  @media (min-width: 992px) {
+    #sidebar-nav {
+      min-height: 100%;
+    }
+    #sidebar {
+        height: 100vh;
+    }
+
+  }
+
   body {
     font-family: Rubik, sans-serif;
   }
@@ -53,6 +63,10 @@
 #sidebar {
     transition: none !important;
     min-width: 200px !important;
+}
+
+#sidebar-nav {
+
 }
 
 

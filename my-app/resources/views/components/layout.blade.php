@@ -18,7 +18,7 @@
         <!-- Main Wrapper -->
         <div id="right-div-col" class="container-fluid g-0 mx-0">
             <div class="row g-0">
-                <div class="col-lg-9" data-collapsed-sidebar-classes="col-12">
+                <div class="col-lg-9 order-last order-lg-first" data-collapsed-sidebar-classes="col-lg-12">
                     <x-navbar />
                     <!-- Items Menu / Main Content -->
                     <div class="container-fluid text-center">
@@ -31,7 +31,8 @@
                 <div id="sidebar" class="col-lg-3 collapse collapse-horizontal show ">
                     <x-sidebar :cartItems="$cartItems" />
                 </div>
-
+            </div>
+        </div>
     </main>
 </body>
 
